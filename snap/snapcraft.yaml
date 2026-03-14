@@ -1,4 +1,14 @@
-name: zizmor-bp
+name: zizmor
+title: Zizmor
+contact:
+  - https://github.com/barryprice
+issues:
+  - https://github.com/barryprice/snap-zizmor/issues
+source-code:
+  - https://github.com/zizmorcore/zizmor
+website:
+  - https://zizmor.sh/
+license: MIT
 base: core24
 adopt-info: zizmor
 summary: Static analysis for GitHub Actions
