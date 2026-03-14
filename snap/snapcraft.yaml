@@ -10,12 +10,13 @@ confinement: strict
 
 apps:
   zizmor:
-    command: bin/zizmor
+    command: zizmor
     plugs: [home, network]
 
 parts:
   zizmor:
-    plugin: python
+    plugin: rust
+    rust-channel: stable
     source: .
     build-packages:
     - git
@@ -24,4 +25,7 @@ parts:
       latest_tag=$(git tag --list | grep '^v' | sort -V | tail -1)
       git checkout ${latest_tag?}
       craftctl set version=$(git describe --tags)
+      craftctl default
+    override-prime: |
+      find .
       craftctl default
