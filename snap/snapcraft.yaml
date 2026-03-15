@@ -1,9 +1,9 @@
 name: zizmor
 title: Zizmor
 contact:
-  - https://github.com/barryprice
+  - https://github.com/zizmorcore/zizmor
 issues:
-  - https://github.com/barryprice/snap-zizmor/issues
+  - https://github.com/zizmorcore/zizmor/issues
 source-code:
   - https://github.com/zizmorcore/zizmor
 website:
@@ -35,7 +35,4 @@ parts:
       latest_tag=$(git tag --list | grep '^v' | sort -V | tail -1)
       git checkout ${latest_tag?}
       craftctl set version=$(git describe --tags)
-      craftctl default
-    override-prime: |
-      find .
       craftctl default
